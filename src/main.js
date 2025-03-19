@@ -1,5 +1,8 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import { createApp } from "vue";
+import "./css/style.css";
+import App from "./App.vue";
+import router from "./router";
+import "@fortawesome/fontawesome-free/css/all.css";
+import "mapbox-gl/dist/mapbox-gl.css";
 
-createApp(App).mount('#app')
+createApp(App).use(router).mount("#app");

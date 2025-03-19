@@ -1,0 +1,63 @@
+@use "./_colors" as c;
+@use "./_typography" as t;
+
+.main-container {
+  .results-for-you {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      font-size: 1.2rem;
+      width: 350px;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 1.8rem;
+    }
+
+    .back-btn {
+      background-color: c.$main-color;
+      width: 150px;
+      height: 35px;
+      text-align: center;
+      border: none;
+      border-radius: 7px;
+      margin-top: 2rem;
+
+      &:hover {
+        background-color: c.$seventh-color;
+      }
+
+      a {
+        color: white;
+        font-family: t.$main-font;
+
+        &:hover {
+          color: c.$main-color;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .main-container {
+    .results-for-you {
+      p {
+        font-size: 1.3rem;
+        width: 650px;
+      }
+
+      .back-btn {
+        a {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
