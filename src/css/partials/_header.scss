@@ -1,0 +1,137 @@
+@use "./_colors" as c;
+
+.logo-img {
+  width: 90%;
+  margin-top: 2.5rem;
+  max-width: 500px;
+}
+
+.plane-img {
+  width: 350px;
+  height: auto;
+  position: absolute;
+  top: -5px;
+  right: 5%;
+}
+
+.menu-large {
+  display: none;
+}
+
+.menu-small {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 1rem;
+  color: c.$secondary-color;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  z-index: 12;
+
+  &:hover {
+    background-color: c.$seventh-color;
+    color: c.$main-color;
+  }
+}
+
+.menu-icon {
+  width: 30px;
+  height: 30px;
+  stroke: c.$fourth-color;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.3s ease-in-out;
+}
+
+.modal {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  z-index: 10;
+  padding: 1rem;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 5px;
+  width: 200px;
+  height: 25%;
+  text-align: center;
+  position: relative;
+
+  li {
+    list-style: none;
+    margin-top: 0.8rem;
+  }
+
+  a {
+    font-size: 1.2rem;
+    text-transform: none;
+    transition: 0.3s;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 34px;
+  cursor: pointer;
+  color: c.$third-color;
+}
+
+@media (min-width: 600px) {
+  .plane-img {
+    width: 450px;
+    height: auto;
+    position: absolute;
+    top: -5px;
+    right: 10%;
+  }
+}
+
+@media (min-width: 768px) {
+  .plane-img {
+    width: 500px;
+    top: -10px;
+    left: 35%;
+  }
+
+  .menu-large {
+    display: flex;
+  }
+
+  .menu-small {
+    display: none;
+  }
+
+  .hero-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-img {
+    max-width: 100%;
+    display: flex;
+    z-index: 1;
+    border-radius: 7px;
+    margin-top: -3.4rem;
+  }
+
+  a {
+    font-size: 1.1rem;
+  }
+}
